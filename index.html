@@ -4,10 +4,87 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+		<link rel="stylesheet" href="modal.css" />
 		<link rel="stylesheet" href="style.css" />
 		<title>DPOhub – Master Your Data Protection Compliance</title>
 	</head>
 	<body>
+		<!-- The Modal -->
+		<div id="modal" class="modal">
+			<!-- Modal content/Booking Form -->
+			<div class="modal-content">
+				<span class="close-button">&times;</span>
+				<h1>Book a Demo</h1>
+				<p>
+					Fill out the form below to schedule a live demonstration of our
+					product.
+				</p>
+
+				<!-- Message box for success or error -->
+				<div id="message-box" class="hidden message-box">
+					Your demo request has been sent! We'll be in touch shortly.
+				</div>
+
+				<form id="booking-form">
+					<!-- Date Picker -->
+					<div class="form-group">
+						<label for="demo-date">Preferred Date</label>
+						<input type="date" id="demo-date" name="demo-date" required />
+					</div>
+
+					<!-- Organization Name -->
+					<div class="form-group">
+						<label for="organization">Organization</label>
+						<input
+							type="text"
+							id="organization"
+							name="organization"
+							placeholder="Your Organization's Name"
+							required
+						/>
+					</div>
+
+					<!-- Full Name -->
+					<div class="form-group">
+						<label for="full-name">Full Name</label>
+						<input
+							type="text"
+							id="full-name"
+							name="full-name"
+							placeholder="Your Full Name"
+							required
+						/>
+					</div>
+
+					<!-- Cell Number -->
+					<div class="form-group">
+						<label for="cell-number">Cell Number</label>
+						<input
+							type="tel"
+							id="cell-number"
+							name="cell-number"
+							placeholder="(123) 456-7890"
+							required
+						/>
+					</div>
+
+					<!-- Email Address -->
+					<div class="form-group">
+						<label for="email">Email Address</label>
+						<input
+							type="email"
+							id="email"
+							name="email"
+							placeholder="you@example.com"
+							required
+						/>
+					</div>
+
+					<!-- Submit Button -->
+					<button type="submit" class="submit-button">Book a Demo</button>
+				</form>
+			</div>
+		</div>
 		<header>
 			<nav class="hero-nav">
 				<div class="logo">
@@ -15,90 +92,100 @@
 				</div>
 				<div class="nav-buttons">
 					<a class="btn" href="#pricing-section">See Pricing</a>
-					<button class="btn">Launch DPOhub</button>
+					<button class="btn">Client Hub</button>
 				</div>
 			</nav>
 			<section class="hero">
 				<div class="hero-text">
 					<h1>MASTER COMPLIANCE</h1>
-					<h2>DPOhub – All-in-One DPO Management</h2>
-					<p>Simple, Secure, Scalable, From $99/month.</p>
+					<h2>
+						Africa-first data protection compliance platform– country-specific,
+						DPO-led, and built to global standards
+					</h2>
+					<p>Local laws, Map, Automate, Prove From $99/month.</p>
 					<div class="cta-buttons">
-						<button class="btn">Book A Demo</button>
-						<a class="btn" href="https://youtube.com/@dpohub.africa?si=-o0dEOPP9q5nW-0b">Watch A Demo</a>
+						<button id="open-modal-btn" class="btn">Book A Demo</button>
+						<a
+							class="btn"
+							href="https://youtube.com/@dpohub.africa?si=-o0dEOPP9q5nW-0b"
+							>Watch A Demo</a
+						>
 					</div>
 				</div>
 			</section>
 		</header>
 
 		<section>
-			<h2 class="text-light text-center">Why Choose DPOhub?</h2>
-			<p class="text-light text-center" style="max-width: 800px; margin: 0 auto;">
-				Compliance management doesn’t have to be complicated. MyDPO is a
+			<h2 class="text-light text-center">Key Features</h2>
+			<p
+				class="text-light text-center"
+				style="max-width: 800px; margin: 0 auto"
+			>
+				Compliance management doesn’t have to be complicated. DPOhub is a
 				powerful, intuitive platform designed to simplify how you manage
-				policies, risks, training, audits, and reports—all from one centralized
-				dashboard.
+				policies, risks, audits, and reports—all from one centralized dashboard.
 			</p>
 
 			<div class="features" style="margin-top: 40px">
 				<div class="feature">
-					<div>📁</div>
-					<h3>Centralized Document & Policy Management</h3>
+					<div>📋</div>
+					<h3>Compliance Automation</h3>
 					<p>
-						Keep all compliance documentation in one secure, searchable space.
+						Local data protection laws compliance automation (e.g ROPA, DSAR,
+						DPIA)
 					</p>
 				</div>
 				<div class="feature">
 					<div>⚠️</div>
-					<h3>Risk Assessment & Mitigation</h3>
+					<h3>Vendor & 3rd Party Risk</h3>
+					<p>Vendor & 3rd party risk and audit management.</p>
+				</div>
+				<div class="feature">
+					<div>📝</div>
+					<h3>Audit Management</h3>
 					<p>
-						Identify, assess, and mitigate risks with guided workflows and
-						built-in templates.
+						Streamlined internal, external audit and regulatory audit management
 					</p>
 				</div>
 				<div class="feature">
-					<div>⏱️</div>
-					<h3>Automated Audits & Task Tracking</h3>
-					<p>
-						Automated scheduling, reminders, and tracking logs keep you on top
-						of deadlines.
-					</p>
-				</div>
-				<div class="feature">
-					<div>📋</div>
-					<h3>Custom Compliance Checklists</h3>
+					<div>⚖️</div>
+					<h3>Framework Alignment</h3>
 					<p>
 						Align with GDPR, POPIA, and other frameworks using built-in tools.
 					</p>
 				</div>
 				<div class="feature">
-					<div>🎓</div>
-					<h3>Staff Training & Awareness Tools</h3>
+					<div>🤖</div>
+					<h3>AI-Aided Policy & Training</h3>
 					<p>
-						Assign internal training, monitor progress, and report with ease.
+						AI aided policy and training development, tracking, assessment and
+						review
 					</p>
 				</div>
 				<div class="feature">
-					<div>📞</div>
-					<h3>Real-Time Advisory Support</h3>
-					<p>
-						Get professional help on complex compliance questions—on demand.
-					</p>
+					<div>✅</div>
+					<h3>Consent Management</h3>
+					<p>Multi-platform consent management</p>
 				</div>
 				<div class="feature">
-					<div>🔔</div>
-					<h3>Live Regulatory Updates</h3>
-					<p>
-						Stay informed with real-time changes to global data protection laws.
-					</p>
+					<div>🌍</div>
+					<h3>Transborder Data Compliance</h3>
+					<p>Transborder data compliance management</p>
 				</div>
 				<div class="feature">
-					<div>🔐</div>
-					<h3>Security You Can Trust</h3>
-					<p>
-						Choose between cloud or on-premise deployment—your data stays
-						protected with enterprise-grade security.
-					</p>
+					<div>📇</div>
+					<h3>Record & Contact Management</h3>
+					<p>Record keeping and point of contact management</p>
+				</div>
+				<div class="feature">
+					<div>🚨</div>
+					<h3>Incident & Risk Management</h3>
+					<p>Incident & risk management</p>
+				</div>
+				<div class="feature">
+					<div>🗺️</div>
+					<h3>Data Inventory Mapping</h3>
+					<p>Data inventory mapping and tracking</p>
 				</div>
 				<div class="feature">
 					<div>📊</div>
@@ -135,8 +222,9 @@
 						>
 							<li>✅ Intelligent automation</li>
 							<li>✅ Instant alerts and reminders</li>
-							<li>✅ Fully customizable to fit your organization</li>
+							<li>✅ Full compliance for your organization</li>
 							<li>✅ Seamless integration with your existing systems</li>
+							<li>✅ Timely reports to inform actions</li>
 						</ul>
 					</div>
 
@@ -144,106 +232,196 @@
 						<h3 style="margin-top: 30px">Affordable & Scalable</h3>
 						<p>Starting at just <strong>$99/month per Controller</strong>.</p>
 						<p>Tiered pricing available for larger teams and enterprises.</p>
-						<button class="btn">Book a Demo</button>
+						<button id="open-modal-btn-1" class="btn">Book a Demo</button>
 						<button class="btn">See Pricing</button>
 					</div>
 				</div>
 			</section>
 			<!-- Pricing Section -->
-		<section id="pricing-section" class="pricing-section">
-			<h2 class="text-center text-light">Choose Your Plan</h2>
-			<div class="pricing-cards">
-				<div class="pricing-card">
-					<h3>Starter</h3>
-					<p class="price">$99<span>/month</span></p>
-					<ul>
-						<li>1 Controller</li>
-						<li>Core Compliance Tools</li>
-						<li>Email Support</li>
-						<li>Basic Reporting</li>
-					</ul>
-					<button class="btn">Subscribe</button>
+			<section id="pricing-section" class="pricing-section">
+				<h2 class="text-center text-light">Choose Your Plan</h2>
+				<div class="pricing-cards">
+					<div class="pricing-card">
+						<h3>Starter</h3>
+						<p class="price">$99<span>/month</span></p>
+						<ul>
+							<li>1 Controller</li>
+							<li>Core Compliance Tools</li>
+							<li>Email Support</li>
+							<li>Basic Reporting</li>
+						</ul>
+						<button class="btn">Subscribe</button>
+					</div>
+					<div class="pricing-card">
+						<h3>Professional</h3>
+						<p class="price">$199<span>/month</span></p>
+						<ul>
+							<li>Up to 5 Controllers</li>
+							<li>Advanced Compliance Tools</li>
+							<li>Priority Email & Chat Support</li>
+							<li>Automated Audits</li>
+						</ul>
+						<button class="btn">Subscribe</button>
+					</div>
+					<div class="pricing-card">
+						<h3>Business</h3>
+						<p class="price">$399<span>/month</span></p>
+						<ul>
+							<li>Up to 20 Controllers</li>
+							<li>All Pro Features</li>
+							<li>Dedicated Account Manager</li>
+							<li>Custom Integrations</li>
+						</ul>
+						<button class="btn">Subscribe</button>
+					</div>
+					<div class="pricing-card">
+						<h3>Enterprise</h3>
+						<p class="price">Custom</p>
+						<ul>
+							<li>Unlimited Controllers</li>
+							<li>All Business Features</li>
+							<li>24/7 Phone Support</li>
+							<li>On-Premise Option</li>
+						</ul>
+						<a class="btn text-center" href="https://wa.me/263783469825"
+							>Contact Sales</a
+						>
+					</div>
 				</div>
-				<div class="pricing-card">
-					<h3>Professional</h3>
-					<p class="price">$199<span>/month</span></p>
-					<ul>
-						<li>Up to 5 Controllers</li>
-						<li>Advanced Compliance Tools</li>
-						<li>Priority Email & Chat Support</li>
-						<li>Automated Audits</li>
-					</ul>
-					<button class="btn">Subscribe</button>
+			</section>
+		</div>
+		<section>
+			<h2 class="text-light text-center">How it works</h2>
+			<p
+				class="text-light text-center"
+				style="max-width: 800px; margin: 0 auto"
+			>
+				Our platform streamlines compliance management through intelligent automation, real-time monitoring, and seamless integration. From policies and training to audits and reporting, everything is centralized in a secure, user-friendly interface built for professionals. With customizable workflows, instant alerts, and enterprise-grade security—whether deployed on-premises or in the cloud—you’ll stay ahead of risks while reducing manual effort.
+			</p>
+
+			<div class="features" style="margin-top: 40px">
+				<div class="feature">
+					<div>✅</div>
+					<h3>Automated Workflows</h3>
+					<p>Reduce manual tasks with intelligent automation and reminders.</p>
 				</div>
-				<div class="pricing-card">
-					<h3>Business</h3>
-					<p class="price">$399<span>/month</span></p>
-					<ul>
-						<li>Up to 20 Controllers</li>
-						<li>All Pro Features</li>
-						<li>Dedicated Account Manager</li>
-						<li>Custom Integrations</li>
-					</ul>
-					<button class="btn">Subscribe</button>
+				<div class="feature">
+					<div>✅</div>
+					<h3>Comprehensive Coverage</h3>
+					<p>
+						Manage policies, procedures, training, audits, and reporting—all in
+						one secure platform.
+					</p>
 				</div>
-				<div class="pricing-card">
-					<h3>Enterprise</h3>
-					<p class="price">Custom</p>
-					<ul>
-						<li>Unlimited Controllers</li>
-						<li>All Business Features</li>
-						<li>24/7 Phone Support</li>
-						<li>On-Premise Option</li>
-					</ul>
-					<a class="btn text-center" href="https://wa.me/263783469825">Contact Sales</a>
+				<div class="feature">
+					<div>✅</div>
+					<h3>User-Friendly Interface</h3>
+					<p>
+						Designed for compliance professionals– easy to navigate and
+						customize.
+					</p>
+				</div>
+				<div class="feature">
+					<div>✅</div>
+					<h3>Real-Time Monitoring</h3>
+					<p>
+						Stay ahead with instant dashboards and alerts for compliance status
+						and risks
+					</p>
+				</div>
+				<div class="feature">
+					<div>✅</div>
+					<h3>Seamless Integration</h3>
+					<p>Connect effortlessly with existing and data sources.</p>
+				</div>
+				<div class="feature">
+					<div>✅</div>
+					<h3>Secure & Confidential</h3>
+					<p>Top-tier security measures to protect sensitive compliance data. OnPrem or Cloud deployment.</p>
 				</div>
 			</div>
 		</section>
-		</div>
 
-		
 		<footer>
 			<h3>Ready to simplify your compliance journey?</h3>
 			<div class="social-links">
-				<a href="https://x.com/DPOhub_africa?t=B4c0uG5_vnPtRqYCzAhjLw&s=09" target="_blank" style="color: inherit; text-decoration: none; margin-right: 10px;">
-					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="vertical-align: middle;">
-						<rect x="3" y="3" width="18" height="18" rx="5" stroke="white" stroke-width="2" fill="none"/>
-						<path d="M8 8l8 8M16 8l-8 8" stroke="white" stroke-width="2" stroke-linecap="round"/>
+				<a
+					href="https://x.com/DPOhub_africa?t=B4c0uG5_vnPtRqYCzAhjLw&s=09"
+					target="_blank"
+					style="color: inherit; text-decoration: none; margin-right: 10px"
+				>
+					<svg
+						width="20"
+						height="20"
+						viewBox="0 0 24 24"
+						fill="none"
+						style="vertical-align: middle"
+					>
+						<rect
+							x="3"
+							y="3"
+							width="18"
+							height="18"
+							rx="5"
+							stroke="white"
+							stroke-width="2"
+							fill="none"
+						/>
+						<path
+							d="M8 8l8 8M16 8l-8 8"
+							stroke="white"
+							stroke-width="2"
+							stroke-linecap="round"
+						/>
 					</svg>
 					Twitter
 				</a>
-				<a href="https://youtube.com/@dpohub.africa?si=-o0dEOPP9q5nW-0b" target="_blank" style="color: inherit; text-decoration: none; margin-right: 10px;">
-					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="vertical-align: middle;">
-						<rect x="3" y="3" width="18" height="18" rx="5" stroke="white" stroke-width="2" fill="none"/>
-						<path d="M10 15V9l6 3-6 3z" fill="currentColor"/>
+				<a
+					href="https://youtube.com/@dpohub.africa?si=-o0dEOPP9q5nW-0b"
+					target="_blank"
+					style="color: inherit; text-decoration: none; margin-right: 10px"
+				>
+					<svg
+						width="20"
+						height="20"
+						viewBox="0 0 24 24"
+						fill="none"
+						style="vertical-align: middle"
+					>
+						<rect
+							x="3"
+							y="3"
+							width="18"
+							height="18"
+							rx="5"
+							stroke="white"
+							stroke-width="2"
+							fill="none"
+						/>
+						<path d="M10 15V9l6 3-6 3z" fill="currentColor" />
 					</svg>
 					YouTube
 				</a>
-				<!-- <a href="https://instagram.com/" target="_blank" style="color: inherit; text-decoration: none; margin-right: 10px;">
-					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="vertical-align: middle;">
-						<rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/>
-						<circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
-						<circle cx="17" cy="7" r="1" fill="currentColor"/>
-					</svg>
-					Instagram
-				</a>
-				<a href="https://facebook.com/" target="_blank" style="color: inherit; text-decoration: none;">
-					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="vertical-align: middle;">
-						<rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/>
-						<path d="M16 8h-2a2 2 0 0 0-2 2v2h-2v2h2v4h2v-4h2v-2h-2v-1a1 1 0 0 1 1-1h1V8z" fill="currentColor"/>
-					</svg>
-					Facebook
-				</a> -->
 			</div>
 			<p style="margin-top: 20px">Make the smart move with DPOhub.</p>
-			<div style="display: flex; justify-content: center; align-items: center; gap: 5px; margin-top: 10px; flex-wrap: wrap;">
+			<div
+				style="
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					gap: 5px;
+					margin-top: 10px;
+					flex-wrap: wrap;
+				"
+			>
 				<a class="btn" href="#pricing-section">Get Started Now</a>
 				<a class="btn" href="https://wa.me/263783469825">Contact Sales</a>
-				<button class="btn">Download Brochure</button>
+				<!-- <button class="btn">Download Brochure</button> -->
 			</div>
 			<p style="margin-top: 20px; font-size: 0.9em">
 				© 2025 DPOhub – Master Your Data Protection Compliance
 			</p>
 		</footer>
+		<script src="main.js"></script>
 	</body>
 </html>
